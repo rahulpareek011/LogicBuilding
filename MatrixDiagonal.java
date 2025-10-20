@@ -1,12 +1,19 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class MatrixDiagonal {
     public static void main(String[] args) {
-        int[][] arr = {
-            {1,2,3},
-            {4,5,6},
-            {7,8,9}
-        };
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter matrix you want: ");
+        int matrix = sc.nextInt();
+        int[][] arr = new int[matrix][matrix];
+
+        System.out.println("Enter "+matrix+"x"+matrix+ " Elements: ");
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr.length;j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
         //3x3 matrix
         System.out.println(Arrays.deepToString(arr));
         System.out.println();
